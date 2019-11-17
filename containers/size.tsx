@@ -1,11 +1,14 @@
 import { Container } from "unstated";
 
 type State = {
-  size: string;
+  size: boolean | "large" | "medium" | "small";
 };
 
 export class SizeContainer extends Container<State> {
-  state = { size: "false" };
+  constructor() {
+    super();
+    this.state = { size: false };
+  }
 
   changeSize(size: "large" | "medium" | "small") {
     this.setState({ size });

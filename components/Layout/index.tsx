@@ -2,13 +2,17 @@ import React, { PureComponent } from "react";
 import { Provider, Subscribe } from "unstated";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import sizeContainer from "../../containers/size";
-import { Head } from "next/document";
+import Head from "next/head";
 
-export default class Layout extends PureComponent {
+type Props = {
+  children: any;
+};
+
+export default class Layout extends PureComponent<Props> {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <>
         <Head>
           <title>Boilerplate of Next.js PWA with typescript</title>
         </Head>
@@ -40,7 +44,7 @@ export default class Layout extends PureComponent {
             user-select: none;
           }
         `}</style>
-      </div>
+      </>
     );
   }
 }

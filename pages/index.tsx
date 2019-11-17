@@ -6,14 +6,13 @@ import { StickyContainer } from "react-sticky";
 import Header from "../components/Header";
 
 type State = {
-  size: "false" | "large" | "medium" | "small";
+  size: boolean | "large" | "medium" | "small";
 };
 
 export default class Main extends Component<{}, State> {
   constructor(props: any) {
     super(props);
-
-    this.state = { size: "false" };
+    this.state = { size: false };
   }
 
   componentDidMount() {
