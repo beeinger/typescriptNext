@@ -1,0 +1,39 @@
+{
+  "name": "typescript-next",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "keywords": [],
+  "author": "Maciej Sułecki",
+  "license": "MIT",
+  "description": "Boilerplate of Next.js PWA with typescript",
+  "dependencies": {
+    "@material-ui/core": "^4.5.2",
+    "@material-ui/icons": "^4.5.1",
+    "@types/node": "^12.12.5",
+    "@types/react": "^16.9.11",
+    "@types/react-sticky": "^6.0.3",
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-css-only": "^4.3.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.0.0",
+    "next": "9.1.2",
+    "next-compose-plugins": "^2.2.0",
+    "next-offline": "^4.0.6",
+    "next-optimized-images": "^2.5.4",
+    "next-purgecss": "^3.1.1",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "react-sticky": "^6.0.3",
+    "typescript": "^3.6.4",
+    "unstated": "^2.1.1"
+  }
+}
