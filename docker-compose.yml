@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   deployed:
-    container_name: front
+    container_name: example
     build:
       context: .
       dockerfile: Dockerfile
