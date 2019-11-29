@@ -16,11 +16,9 @@ export default class Home extends Component<Props, {}> {
         <>
           {size == "large" ? (
             <Large />
-          ) : size == "medium" ? (
-            <Medium />
           ) : (
-            <Small />
-          )}
+              <Small />
+            )}
           <style jsx>
             {`
               #home {

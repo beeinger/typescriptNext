@@ -19,14 +19,7 @@ export default class Main extends Component<{}, State> {
     var size: "large" | "medium" | "small";
     const height = window.innerHeight;
     const width = window.innerWidth;
-    if (height - width < 0) {
-      size = "large";
-    } else if (height - width > 100 && height < 820) {
-      size = "small";
-    } else {
-      size = "medium";
-    }
-    sizeContainer.changeSize(size);
+    size = sizeContainer.changeSize(height, width)
     this.setState({ size: size });
   }
   render() {

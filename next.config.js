@@ -9,9 +9,10 @@ module.exports = withPlugins([
   [
     offline,
     {
+      generateInDevMode: false,
       workboxOpts: {
         swDest: "static/service-worker.js",
-        cacheId: "rzeczowydietetyk",
+        cacheId: "lalalal",
         cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         runtimeCaching: [

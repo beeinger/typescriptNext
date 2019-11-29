@@ -9,6 +9,12 @@ type Props = {
 };
 
 export default class Layout extends PureComponent<Props> {
+
+  componentDidMount() {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    sizeContainer.changeSize(height, width);
+  }
   render() {
     const { children } = this.props;
     return (
