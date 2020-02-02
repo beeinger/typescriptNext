@@ -1,3 +1,4 @@
+import styles from "./header.module.css";
 import { Navbar, Col, Row, Nav } from "react-bootstrap";
 import { Sticky } from "react-sticky";
 import Navigation from "./Navigation";
@@ -11,7 +12,7 @@ function Header() {
             bg="light"
             variant="light"
             fixed="top"
-            className="bg"
+            className={styles.bg}
             style={{ zIndex: 900 }}
           >
             <Navbar.Brand
@@ -56,11 +57,6 @@ function Header() {
             </Navbar.Brand>
             <Nav className="mr-auto" />
             <Navigation />
-            <style jsx global>{`
-              .bg {
-                background-color: rgba(255, 250, 240, 0.75) !important;
-              }
-            `}</style>
           </Navbar>
         </div>
       )}

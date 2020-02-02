@@ -1,20 +1,17 @@
 const withPlugins = require("next-compose-plugins");
-const CSS = require("@zeit/next-css");
 const optimizedImages = require("next-optimized-images");
 const offline = require("next-offline");
 
 module.exports = withPlugins([
   [optimizedImages, {}],
-  [CSS, { url: false }],
   [
     offline,
     {
       generateInDevMode: false,
       workboxOpts: {
         swDest: "static/service-worker.js",
-        cacheId: "lalalal",
+        cacheId: "app_name",
         cleanupOutdatedCaches: true,
-        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /^https?.*/,
@@ -68,5 +65,8 @@ module.exports = withPlugins([
         ]
       }
     }
-  ]
+  ],
+  {
+    //config here
+  }
 ]);

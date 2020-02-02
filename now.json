@@ -1,5 +1,5 @@
 {
-  "name": "rzeczowydietetyk",
+  "name": "app_name",
   "routes": [
     {
       "src": "^/service-worker.js$",

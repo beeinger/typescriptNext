@@ -1,28 +1,26 @@
-import { Container } from "unstated";
+import { useState } from "react";
+import { createContainer } from "unstated-next";
 
-type State = {
-  size: boolean | "large" | "medium" | "small";
-};
+type Type = boolean | "large" | "medium" | "small";
 
-export class SizeContainer extends Container<State> {
-  constructor() {
-    super();
-    this.state = { size: false };
-  }
+function useSize() {
+  let [size, setSize] = useState<Type>(false);
 
-  changeSize(height: number, width: number) {
-    var size: "large" | "medium" | "small"
+  let changeSize = (height: number, width: number) => {
+    var new_size: "large" | "medium" | "small";
     if (height - width < 0) {
-      size = "large";
+      new_size = "large";
     } else if (height - width > 100 && height < 820) {
-      size = "small";
+      new_size = "small";
     } else {
-      size = "medium";
+      new_size = "medium";
     }
-    this.setState({ size: size });
+    setSize(new_size);
     return size;
-  }
+  };
+
+  return { size, changeSize };
 }
 
-const sizeContainer = new SizeContainer();
-export default sizeContainer;
+let Size = createContainer(useSize);
+export default Size;

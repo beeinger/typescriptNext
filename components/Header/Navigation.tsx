@@ -1,13 +1,13 @@
-import { FunctionComponent } from "react";
 import { Nav } from "react-bootstrap";
-import navbarContainer from "../../containers/size";
+import Size from "../../containers/size";
 import { Breadcrumbs, Link, Typography } from "@material-ui/core";
 import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode";
 import HomeIcon from "@material-ui/icons/Home";
 import CallIcon from "@material-ui/icons/Call";
 
-const Navigation: FunctionComponent = () => {
-  return navbarContainer.state.size == "large" ? (
+export default function Navigation() {
+  let size = Size.useContainer();
+  return size.size == "large" ? (
     <Nav
       style={{
         fontSize: "1.75rem"
@@ -45,6 +45,4 @@ const Navigation: FunctionComponent = () => {
       </Link>
     </Breadcrumbs>
   );
-};
-
-export default Navigation;
+}
